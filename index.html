@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en-PH">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Find the right person for your project. Explore professionals and plan your next project with SERV.">
+  <meta name="theme-color" content="#f8f7f3">
+  <meta name="application-version" content="1.0.11">
+  <title>SERV — Find the right expert</title>
+  <link rel="icon" href="assets/serv.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=1.0.11">
+  <script src="app.js?v=1.0.11" defer></script>
+  <script src="assets/nav-glass.js?v=1.0.11" type="module"></script>
+</head>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" class="symbols" aria-hidden="true">
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1Z"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20 9.1c0 4-8 8.9-8 8.9s-8-4.9-8-8.9a4.2 4.2 0 0 1 8-1.8 4.2 4.2 0 0 1 8 1.8Z"/></symbol>
+    <symbol id="i-account" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.25"/><circle cx="12" cy="9.5" r="3"/><path d="M5.8 18.6a6.5 6.5 0 0 1 12.4 0"/></symbol>
+    <symbol id="i-accessibility" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2"/><path d="m4 9 8 2 8-2m-8 2v4m0 0-4 6m4-6 4 6"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M9.5 19a2.6 2.6 0 0 0 5 0M5 16h14l-1.5-2.3V10a5.5 5.5 0 0 0-11 0v3.7Z"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3.8 2.5 5.1 5.6.8-4.1 4 1 5.6-5-2.6-5 2.6 1-5.6-4.1-4 5.6-.8L12 3.8Z"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 3 7 3v6c0 4.1-4.8 7.8-7 9-2.2-1.2-7-4.9-7-9V6l7-3Z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-seal" viewBox="0 0 24 24"><path d="m12 2.5 2.9 2 3.5.4 1.1 3.3 2 2.9-1.5 3.2-.5 3.5-3.3 1.2-2.8 2.1-3.3-1.5-3.5-.2-1.5-3.2-2.2-2.7 1.2-3.3.1-3.5 3.2-1.6 2.6-2.3Z"/><path d="m8.6 12 2.2 2.2 4.6-4.6"/></symbol>
+    <symbol id="i-verified" viewBox="0 0 24 24"><polygon points="12.00,1.10 14.36,3.21 17.45,2.56 18.43,5.57 21.44,6.55 20.79,9.64 22.90,12.00 20.79,14.36 21.44,17.45 18.43,18.43 17.45,21.44 14.36,20.79 12.00,22.90 9.64,20.79 6.55,21.44 5.57,18.43 2.56,17.45 3.21,14.36 1.10,12.00 3.21,9.64 2.56,6.55 5.57,5.57 6.55,2.56 9.64,3.21" fill="currentColor" stroke="none"/><path d="m7.7 12.1 2.7 2.7 5.8-6" stroke="#fff" stroke-width="2.3"/></symbol>
+    <symbol id="i-back" viewBox="0 0 24 24"><path d="M19 12H5m6 6-6-6 6-6"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.2"/><path d="m15.4 15.4 4.2 4.2"/></symbol>
+    <symbol id="i-bookmark" viewBox="0 0 24 24"><path d="M6 5a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v15l-6-4-6 4V5Z"/></symbol>
+    <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3.5 7a2 2 0 0 1 2-2H9l2.3 2H18.5a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-13a2 2 0 0 1-2-2Z"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4.5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-up-right" viewBox="0 0 24 24"><path d="M6 18 18 6M8 6h10v10"/></symbol>
+    <symbol id="i-creative" viewBox="0 0 24 24"><path d="m4 19 4.5-1 10-10a2.5 2.5 0 0 0-3.5-3.5l-10 10L4 19Zm9-12 3.5 3.5M12 20h8"/></symbol>
+    <symbol id="i-business" viewBox="0 0 24 24"><rect x="3.5" y="7.5" width="17" height="12" rx="2"/><path d="M8.5 7.5v-2a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v2m-12 5h17m-10 0v2h3v-2"/></symbol>
+    <symbol id="i-digital" viewBox="0 0 24 24"><path d="m4.5 13 14-6v10l-14-4Zm0 0v-2h3m.5 3 1.2 4.5a1.5 1.5 0 0 0 2.8-.9l-.7-2.7m9.2-6v6"/></symbol>
+    <symbol id="i-tech" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="14" rx="2"/><path d="M3.5 8.5h17m-11 3-2 2.5 2 2.5m5-5 2 2.5-2 2.5"/></symbol>
+    <symbol id="i-education" viewBox="0 0 24 24"><path d="m2.5 9 9.5-4.5L21.5 9 12 13.5 2.5 9Zm4 2v5c2.6 3.3 8.4 3.3 11 0v-5m4-2v6"/></symbol>
+    <symbol id="i-research" viewBox="0 0 24 24"><path d="M9 3h6m-5 0v7L5 18a2 2 0 0 0 1.7 3h10.6a2 2 0 0 0 1.7-3l-5-8V3M8 15h8"/></symbol>
+    <symbol id="i-finance" viewBox="0 0 24 24"><path d="M4 19h16M6 16v-4m6 4V8m6 8V5M5 8l5-4 3 2 5-3"/></symbol>
+    <symbol id="i-shop" viewBox="0 0 24 24"><path d="M5 8h14l1 12H4L5 8Zm4 2V6a3 3 0 0 1 6 0v4"/></symbol>
+    <symbol id="i-lifestyle" viewBox="0 0 24 24"><path d="M5 19c8 1 13-5 14-14-9 1-15 6-14 14Zm0 0 8-8"/></symbol>
+    <symbol id="i-events" viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="14" rx="2"/><path d="M8 4v4m8-4v4M4 10h16m-12 4h2m4 0h2m-8 3h2"/></symbol>
+    <symbol id="i-more" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4.5 4.5L19 7"/></symbol>
+    <symbol id="i-location" viewBox="0 0 24 24"><path d="M18 10c0 4.5-6 9.5-6 9.5s-6-5-6-9.5a6 6 0 1 1 12 0Z"/><circle cx="12" cy="10" r="1.6"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6.5 9.5 5.5 5 5.5-5"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 7.5V12l3 2"/></symbol>
+  </svg>
+
+  <main class="desktop-notice" aria-labelledby="desktop-title">
+    <span class="wordmark" aria-hidden="true">SERV</span>
+    <h1 id="desktop-title" tabindex="-1">Please use your phone.</h1>
+    <p>Open SERV on your phone to browse experts.</p>
+  </main>
+
+  <main class="welcome" id="welcome" aria-labelledby="welcome-title" hidden>
+    <div class="welcome-copy">
+      <h1 class="welcome-wordmark" id="welcome-title">SERV</h1>
+      <p>What do you need done?</p>
+    </div>
+    <button class="button button-light welcome-continue" id="welcome-continue" type="button">Continue</button>
+  </main>
+
+  <div class="mobile-app" id="mobile-app">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="topbar">
+    <div class="shell header-inner">
+      <a class="wordmark" href="#explore" aria-label="SERV home">SERV</a>
+      <div class="header-tools">
+        <a class="icon-button" href="#saved" aria-label="Saved experts"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg></a>
+        <button type="button" class="icon-button account-button" id="account-button" data-action="account" aria-label="No profile" aria-haspopup="dialog"><svg class="icon" aria-hidden="true"><use href="#i-account"/></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <div id="glass-scene">
+  <main class="shell main" id="main" tabindex="-1">
+    <div id="view-explore" data-screen>
+      <form class="search-row" data-search role="search">
+        <button class="icon-button" type="submit" aria-label="Search experts"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg></button>
+        <label for="home-search" class="sr-only">Search for a service</label>
+        <input type="search" id="home-search" name="q" placeholder="Search for a service…" autocomplete="off" maxlength="100" enterkeyhint="search">
+        <button class="icon-button" type="button" data-clear-search aria-label="Clear search" hidden><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+      </form>
+      <section class="hero" aria-labelledby="hero-title">
+        <img src="assets/hero-team.webp" alt="" width="960" height="640" fetchpriority="high">
+        <div class="hero-copy"><h1 id="hero-title">Find the right person<br>for your project.</h1>
+        <p>Freelancers, consultants, and experts, all in one place.</p>
+        <a class="button button-light" href="#experts" data-action="browse">Browse experts</a></div>
+      </section>
+
+      <div class="home-sections">
+        <section aria-labelledby="category-title">
+          <div class="section-heading">
+            <h2 id="category-title">Popular categories</h2>
+            <a class="text-action home-section-link" href="#experts" data-action="browse" aria-label="View all categories">View all<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></a>
+          </div>
+          <div class="category-grid" id="home-categories" role="group" aria-label="Browse by expertise"></div>
+        </section>
+
+        <section aria-labelledby="featured-title">
+          <div class="section-heading"><h2 id="featured-title">Featured experts</h2></div>
+          <div class="list-group expert-group" id="featured-list"></div>
+        </section>
+      </div>
+
+      <section class="project-callout" aria-labelledby="project-callout-title">
+        <div><h2 id="project-callout-title">Have a project?</h2><p>Share a brief and compare experts.</p></div>
+        <button class="button button-dark" type="button" data-action="post">Post a project</button>
+      </section>
+    </div>
+
+    <section class="inner-view" id="view-experts" data-screen aria-labelledby="experts-title" hidden>
+      <h1 id="experts-title" tabindex="-1" class="sr-only">Explore experts</h1>
+      <form class="search-row" data-search role="search">
+        <button class="icon-button" type="submit" aria-label="Search experts"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg></button>
+        <label for="expert-search" class="sr-only">Search for a service</label>
+        <input type="search" id="expert-search" name="q" placeholder="Search for a service…" autocomplete="off" maxlength="100" enterkeyhint="search">
+        <button class="icon-button" type="button" data-clear-search aria-label="Clear search" hidden><svg class="icon" aria-hidden="true"><use href="#i-close"/></svg></button>
+      </form>
+      <section class="category-section explore-categories" id="explore-directory" aria-labelledby="explore-category-title">
+        <div class="section-heading"><h2 id="explore-category-title">Popular categories</h2></div>
+        <div class="category-grid" id="explore-categories" role="group" aria-label="Browse by expertise"></div>
+      </section>
+      <section class="results-section" aria-labelledby="results-title">
+        <div class="section-heading results-heading">
+          <div><h2 id="results-title" tabindex="-1">Meet the experts</h2><p id="results-summary" aria-live="polite">Loading experts…</p></div>
+          <button type="button" class="text-action" id="clear-filters" data-action="clear" hidden>Clear filters</button>
+        </div>
+        <div class="filter-bar" role="group" aria-label="Sort experts">
+          <button type="button" class="filter-button" data-action="sort" data-id="featured" aria-pressed="true">Featured</button>
+          <button type="button" class="filter-button" data-action="sort" data-id="low" aria-pressed="false">Lowest rate</button>
+          <button type="button" class="filter-button" data-action="sort" data-id="high" aria-pressed="false">Highest rate</button>
+        </div>
+        <div class="expert-grid list-group expert-group" id="expert-list" aria-busy="true">
+          <div class="skeleton" aria-hidden="true"><span></span><span></span><span></span></div>
+          <div class="skeleton" aria-hidden="true"><span></span><span></span><span></span></div>
+          <div class="skeleton" aria-hidden="true"><span></span><span></span><span></span></div>
+        </div>
+        <noscript><p>Enable JavaScript to browse profiles and manage projects.</p></noscript>
+      </section>
+    </section>
+
+    <section class="inner-view" id="view-saved" data-screen aria-labelledby="saved-title" hidden>
+      <div class="page-heading"><h1 id="saved-title" tabindex="-1">Saved experts</h1><p>Keep the people you’d like to work with in one place.</p></div>
+      <div class="expert-grid list-group expert-group" id="saved-list"></div>
+    </section>
+
+    <section class="inner-view" id="view-projects" data-screen aria-labelledby="projects-title" hidden>
+      <div class="page-heading projects-heading"><div><h1 id="projects-title" tabindex="-1">My projects</h1><p>Write a brief, compare experts, and track your project.</p></div><button type="button" class="button button-dark" data-action="post"><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg>Post a project</button></div>
+      <div class="project-list list-group" id="project-list"></div>
+    </section>
+  </main>
+  </div>
+
+    <nav aria-label="Main navigation" class="bottom-bar nav-links">
+      <a href="#explore" data-nav="explore" aria-current="page"><svg class="icon" aria-hidden="true"><use href="#i-home"/></svg>Home</a>
+      <a href="#experts" data-nav="experts" data-action="browse"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg>Explore</a>
+      <a href="#projects" data-nav="projects"><svg class="icon" aria-hidden="true"><use href="#i-folder"/></svg>Projects</a>
+      <a href="#saved" data-nav="saved"><svg class="icon" aria-hidden="true"><use href="#i-bookmark"/></svg>Saved<span id="saved-count" class="nav-count" aria-hidden="true" hidden></span></a>
+    </nav>
+    <button class="bottom-bar nav-post" type="button" data-action="post" aria-label="Post a project"><svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></button>
+
+  <dialog class="dialog" id="dialog" aria-labelledby="dialog-title">
+    <div class="dialog-bar"><button type="button" class="icon-button close-button" data-action="close" aria-label="Go back"><svg class="icon" aria-hidden="true"><use href="#i-back"/></svg></button><span id="dialog-label" aria-hidden="true"></span></div>
+    <div class="dialog-content" id="dialog-content"></div>
+    <span class="app-watermark" aria-hidden="true">NFTC CORP</span>
+  </dialog>
+  <div id="toast" class="toast" role="status" aria-atomic="true"></div>
+  </div>
+  <span class="app-watermark" aria-hidden="true">NFTC CORP</span>
+</body>
+</html>
